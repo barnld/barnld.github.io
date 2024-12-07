@@ -1,0 +1,40 @@
+Info:
+
+- Building the site locally (when developing site):
+    - Terminal (blog directory): "bundle exec jekyll serve" (test if works without "bundle exec"?)
+    - Site is built and run on: "http://localhost:4000"
+    - To force browser to refresh when source files are changed: "bundle exec jekyll serve --livereload"
+
+
+
+
+Good to know:
+- Markdown files are preferred to add simpler content (e.g. blog posts or pages). These are processed by Jekyll to generate HTML automatically.
+        - Post .md files need to be in "_posts" folder
+        - Standalone pages can also be created, in a custom folder or in root directory
+        - Markdown syntax is completely compatible (so imo Obsidian notes could theoretically be used without any issues!)
+    - HTML files can also be created manually for more "complex" content with more customizability if needed (+ .js integration).
+- Structure of a blog post:
+    - Mandatory naming: "YYYY-MM-DD-title.md" (e.g."2024-12-07-my-first-post.md") or "YYYY-MM-DD-title.html"
+    - Front matter defines the YAML metadata that defines the post's properties (title, layout, date, categories & tags...)
+- HTML file types:
+    - a) Standalone (e.g. about.html, contact.html)
+        - To be placed in the root Jekyll project directory
+        - Accessible at e.g.: "http://my-site.com/about.html"
+    - b) HTML Blog Post
+        - To be placed in "_posts" folder
+    - c) Custom Layout (reusable "template")
+        - To be placed in "_layouts" folder -> can be used in other HTML or .markdown files with front matter's "layout:" property
+    - d) Snippets/Partials (headers, footers, sections...)
+        - To be placed in "_includes" folder -> can be used in layouts or pages using e.g. "{% include header.html %}"
+    - e) Custom Assets (raw HTML, which doesn't need to be processed by Jekyll)
+        - To be placed in "assets" folder (or in a static folder) -> can be linked directly using e.g. "<a href="/assets/example.html">View Example</a>"
+- Data files are used commonly for storing navigation and other data
+    - In Ruby ecosystem, yaml files are used most commonly
+
+    
+
+Sources:
+- Info for "minima" theme:
+    - https://github.com/jekyll/minima
+    - Setting up blog pages, formatting, styles, etc...

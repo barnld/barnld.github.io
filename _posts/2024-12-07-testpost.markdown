@@ -2,7 +2,7 @@
 layout: post
 title:  "My first test post!"
 date:   2024-12-07 09:56:26 +0100
-categories: jekyll update
+categories: test
 ---
 
 This is a test post. Seems to be working fine.

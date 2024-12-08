@@ -4,3 +4,5 @@
   link: /about/index.html
 - name: Test Page
   link: /test_page.html
+- name: Blog
+  link: /blog.html
